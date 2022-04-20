@@ -10,9 +10,9 @@ import {
   Text,
   View,
 } from "react-native";
-import HomeScreen from "./src/screens/HomeScreen";
-import CreateAcc from "./src/screens/CreateAcc";
-import Login from "./src/screens/Login";
+//import HomeScreen from "./src/screens/HomeScreen";
+//import CreateAcc from "./src/screens/CreateAcc";
+//import Login from "./src/screens/Login";
 import Dashboard from "./src/screens/Dashboard";
 import BreathingFlowSignal from "./src/screens/BreathingFlowSignal";
 import NasalPressure from "./src/screens/NasalPressure";
@@ -36,9 +36,6 @@ const Stack = createStackNavigator();
 const AppStack = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="HomeScreen" component={HomeScreen} />
-      <Stack.Screen name="CreateAcc" component={CreateAcc} />
-      <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Dashboard" component={Dashboard} />
       <Stack.Screen
         name="BreathingFlowSignal"
@@ -58,3 +55,9 @@ const App = () => {
 };
 
 export default App;
+
+
+//insert after <StackNavigator>
+//<Stack.Screen name="HomeScreen" component={HomeScreen} />
+//<Stack.Screen name="CreateAcc" component={CreateAcc} />
+//<Stack.Screen name="Login" component={Login} />
