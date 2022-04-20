@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import { View, Text } from "react-native";
 import {
   Chart,
@@ -9,8 +9,33 @@ import {
 } from "react-native-responsive-linechart";
 
 //import db from "../db/firebase";
+import { firebase } from '@react-native-firebase/database';
 
-const BreathingFlowSignal = () => {
+
+function BreathingFlowSignal () {
+
+  const [in_val, setin_val] = useState('hak')
+  const [test, setmytest] = useState([{x: 0, y:0}])
+
+
+  useEffect(() => {
+    // Update the document title using the browser API
+    const reference = firebase
+    .app()
+    .database('https://ventilator-project-final-default-rtdb.firebaseio.com/')
+    .ref('/Breathing flow signal');
+    console.log('haha')
+    reference.on('value', snapshot => {
+    console.log('User data: ', test);
+    setmytest(test =>[...test,{x: test.length, y:snapshot.val()}]);
+
+    const M = new Map(Object.entries({ 
+      language: "JavaScript" 
+    }));
+
+  });
+}, [test.x]);
+
   return (
     <View>
       <Text
@@ -22,7 +47,7 @@ const BreathingFlowSignal = () => {
           color: "#009394",
         }}
       >
-        Breathing Flow Signal
+     
       </Text>
 
       <View
@@ -46,29 +71,7 @@ const BreathingFlowSignal = () => {
 
       <Chart
         style={{ height: 200, width: 400 }}
-        data={[
-          { x: 0, y: 0.1 },
-          { x: 1, y: 0.4 },
-          { x: 2, y: 0.7 },
-          { x: 3, y: 0.1 },
-          { x: 4, y: 0.4 },
-          { x: 5, y: 0.7 },
-          { x: 6, y: 0.1 },
-          { x: 7, y: 0.4 },
-          { x: 8, y: 0.7 },
-          { x: 9, y: 0.1 },
-          { x: 10, y: 0.4 },
-          { x: 11, y: 0.7 },
-          { x: 12, y: 0.1 },
-          { x: 13, y: 0.4 },
-          { x: 14, y: 0.7 },
-          { x: 15, y: 0.1 },
-          { x: 16, y: 0.4 },
-          { x: 17, y: 0.7 },
-          { x: 18, y: 0.1 },
-          { x: 19, y: 0.4 },
-          { x: 20, y: 0.7 },
-        ]}
+        data={test}
         padding={{ left: 65, bottom: 20, right: 30, top: 30 }}
         xDomain={{ min: 0, max: 20 }}
         yDomain={{ min: -0.4, max: 1 }}

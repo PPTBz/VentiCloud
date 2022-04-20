@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "99280166155",
+    "firebase_url": "https://ventilator-project-final-default-rtdb.firebaseio.com",
+    "project_id": "ventilator-project-final",
+    "storage_bucket": "ventilator-project-final.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99280166155:android:b6a675adeacac79921960e",
+        "android_client_info": {
+          "package_name": "com.venticloud"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "99280166155-d5s7l62khmim11jqoqlq637lagtopb9m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.venticloud",
+            "certificate_hash": "eacebb1c223641d4ddc6beeb6520644a287e1bd9"
+          }
+        },
+        {
+          "client_id": "99280166155-9ka5qrbg14g4gt87ev7f5c1n8ntd2btd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFpKYlsOOuU7cXqMiPJREB23i6_jreZuw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "99280166155-9ka5qrbg14g4gt87ev7f5c1n8ntd2btd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
