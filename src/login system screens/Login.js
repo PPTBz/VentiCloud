@@ -8,7 +8,7 @@ import {
   TextInput,
   Image,
 } from "react-native";
-import ViewContainer from "../components/ViewContainer";
+import ViewContainer from "./components/ViewContainer";
 
 const CreateAcc = ({ navigation }) => {
   const [email, onChangeEmail] = React.useState("Email");

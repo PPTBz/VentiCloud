@@ -47,7 +47,7 @@ function BreathingFlowSignal () {
           color: "#009394",
         }}
       >
-     
+     Breathing Flow Signal
       </Text>
 
       <View
@@ -65,7 +65,7 @@ function BreathingFlowSignal () {
             color: "#009394",
           }}
         >
-          Flow L·s^-1
+          Flow L/min
         </Text>
       </View>
 
@@ -73,26 +73,26 @@ function BreathingFlowSignal () {
         style={{ height: 200, width: 400 }}
         data={test}
         padding={{ left: 65, bottom: 20, right: 30, top: 30 }}
-        xDomain={{ min: 0, max: 20 }}
-        yDomain={{ min: -0.4, max: 1 }}
+        xDomain={{ min: 1, max: 3 }}
+        yDomain={{ min: 0, max: 120 }}
       >
         <VerticalAxis
-          tickCount={8}
-          theme={{ labels: { formatter: (v) => v.toFixed(2) } }}
+          tickCount={7}
+          theme={{ labels: { formatter: (v) => v.toFixed(0) } }}
         />
-        <HorizontalAxis tickCount={5} />
+        <HorizontalAxis tickCount={3} />
         <Area
           theme={{
             gradient: {
               from: { color: "#009394" },
-              to: { color: "#009394", opacity: 0.4 },
+              to: { color: "#009394", opacity: 0.2 },
             },
           }}
         />
         <Line
           theme={{
             stroke: { color: "#009394", width: 3 },
-            scatter: { default: { width: 4, height: 4, rx: 2 } },
+            scatter: { default: { width: 7, height: 7, rx: 5 } },
           }}
         />
       </Chart>
@@ -104,7 +104,7 @@ function BreathingFlowSignal () {
           color: "#009394",
         }}
       >
-        Time s
+        Time min
       </Text>
     </View>
   );

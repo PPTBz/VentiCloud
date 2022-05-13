@@ -10,7 +10,7 @@ import {
   Text,
   View,
 } from "react-native";
-//import HomeScreen from "./src/screens/HomeScreen";
+//import HomeScreen from "./src/login system screens/HomeScreen";
 //import CreateAcc from "./src/screens/CreateAcc";
 //import Login from "./src/screens/Login";
 import Dashboard from "./src/screens/Dashboard";
